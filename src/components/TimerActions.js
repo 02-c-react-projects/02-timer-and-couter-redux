@@ -3,7 +3,7 @@ import {
   pauseTimer,
   resetTimer,
   startTimer
-} from "../redux/actions/timerActions";
+} from "../redux/reducers/timerReducer";
 
 export const TimerActions = () => {
   const dispatch = useDispatch();
