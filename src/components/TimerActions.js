@@ -2,12 +2,14 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   pauseTimer,
   resetTimer,
-  startTimer
+  startTimer,
+  timerSelector
 } from "../redux/reducers/timerReducer";
 
 export const TimerActions = () => {
   const dispatch = useDispatch();
-  const { isRunning } = useSelector((state) => state.timerReducer);
+  // const { isRunning, elapsedTime } = useSelector(state=>state.timerReducer);
+  const { isRunning } = useSelector(timerSelector);
 
   return (
     <div className="actions">

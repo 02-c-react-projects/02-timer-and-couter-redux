@@ -1,10 +1,12 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { incrementTimer } from "../redux/reducers/timerReducer";
+import { incrementTimer, timerSelector } from "../redux/reducers/timerReducer";
 
 export const Time = () => {
   const dispatch = useDispatch();
-  const { isRunning, elapsedTime } = useSelector((state) => state.timerReducer);
+  
+  // const { isRunning, elapsedTime } = useSelector(state=>state.timerReducer);
+  const { isRunning, elapsedTime } = useSelector(timerSelector);
   
 
   useEffect(() => {

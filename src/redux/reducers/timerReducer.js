@@ -25,6 +25,9 @@ const timerSlice= createSlice({
 export const timerReducer = timerSlice.reducer;
 export const { startTimer, pauseTimer, resetTimer, incrementTimer } = timerSlice.actions
 
+//selector
+
+export const timerSelector = (state) => state.timerReducer;
 // export const timerReducer = (state = INITIAL_STATE, action) => {
 //   switch (action.type) {
 //     case START_TIMER:

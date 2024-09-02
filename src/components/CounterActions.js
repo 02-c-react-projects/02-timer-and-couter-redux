@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
-import { incrementCounter,decrementCounter,resetCounter } from "../redux/reducers/counterReducer";
+import { incrementCounter,decrementCounter,resetCounter, counterSelector } from "../redux/reducers/counterReducer";
 
 export const CounterActions = () => {
-  const { count } = useSelector((state) => state.counterReducer);
+  // const { count } = useSelector(state=>state.counterReducer);
+  const { count } = useSelector(counterSelector);
   const disptach=useDispatch();
 
   return (

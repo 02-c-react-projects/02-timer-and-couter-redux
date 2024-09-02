@@ -22,6 +22,9 @@ const counterSlice = createSlice({
 
 export const counterReducer = counterSlice.reducer;
 export const { incrementCounter, decrementCounter, resetCounter } = counterSlice.actions
+
+//selector
+export const counterSelector = (state) => state.counterReducer;
 // export const counterReducer = (state=INITIAL_STATE, action) => {
 //     switch (action.type) {
 //         case INCREMENT_COUNTER:
